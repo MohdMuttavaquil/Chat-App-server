@@ -9,7 +9,7 @@ import { Server } from 'socket.io'
 import { socketHandler } from './socket/sockethandeler.js'
 
 const app = express()
-const PORT  = 3000
+const PORT  = 4000
 
 // For socket.io
 const server = createServer(app)
