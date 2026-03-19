@@ -13,10 +13,7 @@ const PORT  = 4000
 
 // For socket.io
 const server = createServer(app)
-const io = new Server(server, {
-  cors:{
-    origin: "https://chat-app-1-h1qb.onrender.com"
-  }})
+const io = new Server(server)
 
 // Database connaction
 dbConnect()
