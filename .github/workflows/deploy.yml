@@ -38,4 +38,4 @@ jobs:
                cd ${{ secrets.APP_DIR }}
                git pull origin main 
                npm install --production
-               pm2 restart server           
+               pm2 restart server1           
