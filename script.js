@@ -13,13 +13,20 @@ const PORT  = 4000
 
 // For socket.io
 const server = createServer(app)
-const io = new Server(server)
+const io = new Server(server, {
+  cors: {
+    origin: "https://chat-app-1-h1qb.onrender.com",
+  }
+})
 
 // Database connaction
 dbConnect()
 
-app.use(cors())
 app.use(express.json())
+app.use(cors({
+  origin: "https://chat-app-1-h1qb.onrender.com",
+   methods: ["GET", "POST"],
+}))
 
 app.use("/api/user", userRoute)
 app.use("/api/contect", contectRoute)
